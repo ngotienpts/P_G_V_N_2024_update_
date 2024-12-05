@@ -150,18 +150,18 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 35px;
-    background-color: #A96D2B;
-    border: 1px solid #A96D2B;
+    padding: 12px 35px;
+    background-color: #993333;
+    border: 1px solid #993333;
     color: #fff;
     outline: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-weight: normal;
     height: 50px;
 
     &:hover {
         background-color: #fff;
-        color: #A96D2B; 
+        color: #993333; 
     }
 }
 /*===========================================================================*/
@@ -338,6 +338,9 @@ p {
 }
 .bg-red-ffe{
     background-color: #FFEBEB;
+}
+.bg-red-fff{
+    background-color: #FFF5F5;
 }
 .bg-gray-f7{
     background-color: #F7F7F7;
@@ -845,6 +848,12 @@ p {
 }
 
 /*=================================================================*/
+.pt-3xl-50 {
+    padding-top: 50px;
+}
+.pl-3xl-50 {
+    padding-left: 50px;
+}
 .pt-3xl-60 {
     padding-top: 60px;
 }
@@ -878,6 +887,9 @@ p {
 }
 .border-15 {
     border-radius: 15px;
+}
+.border-20 {
+    border-radius: 20px;
 }
 .border-25 {
     border-radius: 25px;
@@ -1157,6 +1169,12 @@ p {
 .border-dotted-ce {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #CECECE), color-stop(50%, #ffffff00)) 0 100% / 4px 1px repeat-x;
     background: linear-gradient(to right, #CECECE 50%, #ffffff00 50%) 0 100% / 4px 1px repeat-x;
+}
+.border-dotted-cece2 {
+    border-bottom: 1px dotted #CECECE;
+}
+.border-ce {
+    border: 1px solid #CECECE;
 }
 .color-inherit {
     &:hover {

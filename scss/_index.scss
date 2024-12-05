@@ -12,6 +12,7 @@
         background-color: #993333;
     }
 }
+
 .box-latest-news {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccc), color-stop(50%, #ffffff00)) 0 0 / 1px 4px repeat-y;
     background: linear-gradient(to bottom, #ccc 50%, #ffffff00 50%) 0 0 / 1px 4px repeat-y;
@@ -54,6 +55,7 @@
     }
         
 }
+
 .box-latest-news-secondary {
 
     &__list {
@@ -72,6 +74,37 @@
         }
     }
 
+}
+
+.block-primary{
+    &__left {
+        max-width: calc(100% - 300px);
+        width: 100%;
+        padding-right: 30px;
+
+    }
+    &__right {
+        max-width: 300px;
+        width: 100%;
+
+    }
+}
+
+.box-smalls-col-3xl-3 {
+    .article {
+        &:nth-child(n+4){
+            display: none;
+        }
+    }
+}
+
+.heading-primary {
+    &__union {
+        .union {
+            height: 14px;
+            width: auto !important;
+        }
+    }
 }
 .section-primary {
     &__left {

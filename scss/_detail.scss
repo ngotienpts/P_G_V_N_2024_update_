@@ -1,9 +1,72 @@
 
+.share-detail {
+    &__container {
+        position: sticky;
+        top: 20%;
+    }
+
+    &__list {
+        border: 1px solid #cecece;
+        border-radius: 999px;
+        padding: 8px;
+        background-color: #fff;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__link {
+        width: 33px;
+        height: 33px;
+        border-radius: 999px;
+        border: 1px solid #993333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 18px;
+            width: auto;
+        }
+
+    }
+
+    &--cmt {
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 10px;
+    }
+}
+.social-secondary {
+    flex-wrap: wrap;
+
+    .social-link {
+        width: 33px;
+        height: 33px;
+        border-radius: 999px;
+        border: 1px solid #993333;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 15px;
+            width: auto;
+        }
+    }
+}
 
 .detail-title {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+}
+.detail-sapo {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .detail-content {
@@ -54,7 +117,7 @@
     }
     & p,
     & li {
-        font-size: 18px;
+        font-size: 17px;
         margin-bottom: 18px;
         line-height: 160%;
         word-break: break-word;
@@ -94,7 +157,7 @@
     }
 
     & blockquote {
-        background: #242d2e;
+        background: #993333;
         border-radius: 10px;
         padding: 40px;
         position: relative;
@@ -123,4 +186,42 @@
         }
     }
 
+}
+
+.time-public-wrapper {
+    max-width: 1240px;
+}
+
+.detail-author {
+    background-color: #F5F5F5;
+
+    .author-avatar {
+        width: 107px;
+    }
+
+    .topic {
+        &-left {
+            .icon {
+                width: 27px;
+                height: 27px;
+                background-color: #F1DCDC;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 15px;
+                    height: auto;
+                }
+            }
+        }
+
+        &-list {
+            flex-wrap: wrap;
+        }
+        &-item {
+            margin: 2px 4px;
+        }
+    }
 }

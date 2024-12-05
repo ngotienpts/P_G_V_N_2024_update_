@@ -312,6 +312,9 @@ document.addEventListener("DOMContentLoaded", function () {
             searchMb.onclick = function () {
                 formSearchMb.classList.add("active");
                 focusElement.focus();
+                if (showSearchMb.classList.contains("active")) {
+                    focusElement.value = "";
+                }
             };
             closeSearchMb.onclick = function () {
                 formSearchMb.classList.remove("active");
@@ -372,10 +375,10 @@ document.addEventListener("DOMContentLoaded", function () {
         handleShowDropdownSubMenu();
         handleShowSearchMb();
         // slide
-        
+        initSliderThreeItems();
         // end slide
         handleBackTop();
-        // handleVideo_16x9();
+        handleChangeTab();
         window.addEventListener('scroll',handleWindowScroll);
         window.addEventListener('resize',handleWindowScroll);
     }
