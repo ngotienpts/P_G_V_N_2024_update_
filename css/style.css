@@ -1988,6 +1988,27 @@ p {
   width: auto !important;
 }
 
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: -10px;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: -10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background-color: #99333370;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 16px;
+}
+
 .section-primary__left {
   max-width: calc(100% - 300px);
   width: 100%;
@@ -2124,7 +2145,7 @@ p {
   margin: 4px;
 }
 .pagination-item.active .pagination-link {
-  background-color: #A96D2B;
+  background-color: #993333;
   color: #fff;
 }
 .pagination-link {
@@ -2139,7 +2160,7 @@ p {
   transition: all 0.2s;
 }
 .pagination-link:hover {
-  background-color: #A96D2B;
+  background-color: #993333;
   color: #fff;
 }
 
@@ -2227,6 +2248,15 @@ p {
   border-top: 1px dotted #cecece;
 }
 
+.contemplation-secondary__container {
+  border-bottom: 1px dotted #cecece;
+  margin-bottom: 30px;
+}
+.contemplation-secondary:last-child .contemplation-secondary__container {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .share-detail__container {
   position: sticky;
   top: 20%;
@@ -2308,6 +2338,7 @@ p {
   line-height: 1.25rem;
   color: #555;
   text-align: center;
+  font-style: italic;
 }
 .detail-content figure figcaption em {
   font-style: italic;
@@ -2347,7 +2378,6 @@ p {
 .detail-content h2, .detail-content h3, .detail-content h4, .detail-content h5, .detail-content h6 {
   font-weight: bold;
   margin-bottom: 15px;
-  font-family: "Raleway", sans-serif;
   color: #181E23;
 }
 .detail-content h2 {
@@ -2423,6 +2453,108 @@ p {
   margin: 2px 4px;
 }
 
+.detail-related-news {
+  background-image: url("../images/patten-1.png");
+  background-size: cover;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+}
+
+.tag-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tag-item:first-child .breadcrumb-link {
+  margin-left: -10px;
+}
+.tag-item:last-child .tag-link::before {
+  content: none;
+}
+.tag-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+.tag-link::before {
+  content: "/";
+  position: absolute;
+  right: -3px;
+  color: #666;
+}
+
+.print-box .detail-content {
+  padding-left: 0;
+}
+.print-box .detail-content p {
+  text-align: justify;
+  word-break: break-word;
+}
+.print-box .print-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #9b9b9b;
+}
+.print-box .print-btn:hover {
+  background-color: #555;
+}
+
+.logo-print img {
+  width: 230px;
+  height: auto;
+}
+
+@media print {
+  body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin-left: 20mm;
+    visibility: hidden;
+  }
+
+  .print-box__container {
+    visibility: visible;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    width: calc(100% - 20mm);
+    max-width: 100%;
+    page-break-inside: avoid;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .print-btn {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .detail-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .detail-content, .expNoEdit, .expEdit {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, p, figure {
+    page-break-inside: avoid;
+  }
+}
 #back-top {
   position: fixed;
   right: 24px;
@@ -2848,6 +2980,10 @@ p {
     margin-bottom: 20px;
   }
 
+  .detail-content {
+    padding-left: 0;
+  }
+
   .footer {
     padding-top: 30px;
   }
@@ -2913,6 +3049,19 @@ p {
 
   .btn {
     height: 44px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background-color: #99333370;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 12px;
   }
 
   .section-primary__left .box-outstanding__large .article-title {
@@ -3102,6 +3251,7 @@ p {
 
   .contemplation-secondary__container {
     padding-bottom: 30px;
+    margin-bottom: 30px;
   }
   .contemplation-secondary .articles .article {
     padding: 15px;
@@ -3167,6 +3317,49 @@ p {
   }
   .detail-content blockquote p {
     font-size: 16px;
+  }
+
+  .detail-author {
+    padding: 20px 15px;
+  }
+  .detail-author .author-avatar {
+    width: 54px;
+  }
+  .detail-author .author-info {
+    padding-left: 12px;
+  }
+  .detail-author .topic-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+  .detail-contemplation-primary__container {
+    margin-bottom: 30px;
+  }
+  .detail-contemplation-primary .section-quinary {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .detail-related-news {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 20px 15px;
+    border-radius: 0;
+    width: auto;
+  }
+  .detail-related-news__heading {
+    font-size: 20px;
+  }
+  .detail-related-news__slide .article-title {
+    font-size: 14px;
+  }
+
+  .tag-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto;
   }
 
   .footer {

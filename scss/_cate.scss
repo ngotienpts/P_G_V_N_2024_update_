@@ -46,7 +46,7 @@
        
         &.active {
             .pagination-link {
-                background-color: #A96D2B;
+                background-color: #993333;
                 color: #fff;
             }
         }
@@ -63,7 +63,7 @@
         transition: all 0.2s;
 
         &:hover {
-            background-color: #A96D2B;
+            background-color: #993333;
             color: #fff;
         }
     }
@@ -169,6 +169,20 @@
         .tab-box-primary {
             margin-top: 20px;
             border-top: 1px dotted #cecece;
+        }
+    }
+}
+
+.contemplation-secondary {
+    &__container {
+        border-bottom: 1px dotted #cecece;
+        margin-bottom: 30px;
+    }
+
+    &:last-child {
+        .contemplation-secondary__container {
+            border-bottom: none;
+            margin-bottom: 0;
         }
     }
 }
